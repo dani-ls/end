@@ -1,0 +1,1 @@
+window+r    输入cmd

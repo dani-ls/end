@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../../插件/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+    <input type="text">
+    <input type="submit" value="提交">
+    </form>
+    <p style="width: 50px;
+    height: 20px;text-align: center;line-height: 20px;border: 1px solid; "></p>
+</body>
+<script>
+$.ajax({
+    url:'http://localhost:3000/code',
+    data:'',
+    type:'get',
+    dataType:'jsonp',
+    asanc:true
+}).done(function(str){
+    console.log(str)
+    $('p').html(str.data)
+})
+</script>
+</html>
